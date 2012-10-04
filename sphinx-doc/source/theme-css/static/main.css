@@ -1,0 +1,15 @@
+@import url('default.css');
+
+div.body a {
+  color: #E1884D;
+  text-decoration: underline;
+}
+
+div#id1 a {
+  color: rgb(53,  95,  124);
+  text-decoration: underline;
+}
+
+strong {
+  color: #ff0000;
+}
