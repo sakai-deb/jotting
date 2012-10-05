@@ -7,4 +7,4 @@
 .. toctree::
    :maxdepth: 1
 
-   action_at_github
+   other_contents/action_at_github

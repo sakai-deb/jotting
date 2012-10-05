@@ -4,6 +4,42 @@ div.body a {
   color: #E1884D;
   text-decoration: underline;
 }
+div#header {
+}
+div.related {
+  float: left;
+}
+
+#globalnavi{
+  margin: 0;
+  padding: 0;
+}
+#globalnavi ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  background-color: black;
+}
+#globalnavi li{
+  width: 120px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+#globalnavi a{
+  text-align: center;
+  padding: 0.4em 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display:block;
+}
+#globalnavi a:hover{
+  background-color: red;
+  color: white;
+}
+
 
 div#id1 a {
   color: rgb(53,  95,  124);

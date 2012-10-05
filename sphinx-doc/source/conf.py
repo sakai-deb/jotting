@@ -25,7 +25,8 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode']
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['.templates']
@@ -137,9 +138,9 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
-#html_sidebars = {
-#        '**' : ['sourcelink.html', 'serarchbox.html']
-#        }
+html_sidebars = {
+        '**' : ['sourcelink.html', 'searchbox.html']
+        }
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

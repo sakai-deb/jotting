@@ -1,0 +1,22 @@
+{% extends "basic/layout.html" %}
+
+{% block relbar1 %}
+<!--
+    <div class="related">
+        <li><a href="#">memo : Linuxとかプログラミングとか</a> &raquo;</li> 
+    </div>
+-->
+{% endblock relbar1 %}
+
+{%- block header %}
+<div id="header">
+  <div id="globalnavi">
+    <ul>
+      <li><a href="{{ pathto('index') }}">Home</a></li>
+      <li><a href="{{ pathto('aboutus/aboutus') }}">About</a></li>
+    </ul>
+  </div>
+</div>
+{{ super() }}
+{%- endblock header %}
+

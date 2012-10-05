@@ -4,7 +4,7 @@
 
 .. index:: GitHub
 
-:date: |today|
+:date: October 06, 2012
 .. contents::
    目次
    :local:
