@@ -10,6 +10,7 @@ div.related {
   float: left;
 }
 
+/* 上部のナビバー */
 #globalnavi{
   margin: 0;
   padding: 0;
@@ -40,12 +41,31 @@ div.related {
   color: white;
 }
 
-
-div#id1 a {
+/* body */
+/* リンクの文字色とアンダーライン */
+div.body a {
   color: rgb(53,  95,  124);
   text-decoration: underline;
 }
-
+/* 強調文字色 */
 strong {
   color: #ff0000;
+}
+
+/* すべてのテーブル */
+/* テーブルの色、境界線の設定 */
+table.docutils {
+  border: solid;
+  border-collapse: collapse;
+  border-width: thin;
+}
+table.docutils th {
+  border: solid;
+  border-width: thin;
+  border-bottom-width: 2px;
+}
+table.docutils td {
+  border: solid;
+  border-collapse: collapse;
+  border-width: 1px;
 }
