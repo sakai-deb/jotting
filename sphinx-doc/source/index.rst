@@ -1,4 +1,4 @@
-.. Haskell memo doc.
+.. Haskell doc.
 
 Main Page
 ========================================

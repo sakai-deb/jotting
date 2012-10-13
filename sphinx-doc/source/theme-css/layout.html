@@ -1,11 +1,5 @@
 {% extends "basic/layout.html" %}
-
 {% block relbar1 %}
-<!--
-    <div class="related">
-        <li><a href="#">memo : Linuxとかプログラミングとか</a> &raquo;</li> 
-    </div>
--->
 {% endblock relbar1 %}
 
 {%- block header %}
@@ -16,7 +10,59 @@
       <li><a href="{{ pathto('aboutus/aboutus') }}">About</a></li>
     </ul>
   </div>
+  <div id="titledesign">
+<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+    <h1><a href="{{pathto('index')}}">{{project}}</a></h1>
+  </div>
 </div>
 {{ super() }}
-{%- endblock header %}
+{% endblock header %}
+
+{%- block sidebar1 %}
+{% endblock sidebar1 %}
+{%- block sidebar2 %}
+<div id="sidebar">
+  <div id="sidelinks">
+    <h3>Links</h3>
+    <ul>
+      <li><a href="http://sphinx-users.jp/">Sphinx-Users.jp</a></li>
+      <li><a href="http://www.haskell.org/haskellwiki/Haskell">HaskellWiki</a></li>
+      <li><a href="http://hackage.haskell.org/packages/hackage.html">hackageDB</a></li>
+    </ul>
+  </div>
+  <div id="recentpost">
+  </div>
+</div>
+{% endblock sidebar2 %}
+
+{%- block document %}
+ <div id="document">
+   {%- block body %}{%-endblock body%}
+ </div>
+ {%- endblock document %}
+
+{%- block relbar2 %}
+<div id="related">
+  <ul class="link">
+    {% if prev %}
+      <li><a href="{{ prev.link|e }}">Prev</a></li>
+    {% endif %}
+    {% if next %}
+      <li><a href="{{ next.link|e }}">Next</a></li>
+    {% endif %}
+    <li class="right"><a href="{{pathto('genindex')}}">Index</a></li>
+  </ul>
+</div>
+{% endblock relbar2 %}
+{%- block footer %}
+<div id="footer">
+  &copy;copyright:{{ copyright }} <br />
+  Last update: {{last_updated}} <br />
+  Created using Sphinx {{sphinx_version}}
+</div>
+{% endblock footer%}
+
+
+</body>
+</html>
 
