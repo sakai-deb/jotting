@@ -50,9 +50,7 @@
     {% if next %}
       <li><a href="{{ next.link|e }}">Next</a></li>
     {% endif %}
-    {% if prev %}{% if next %}
-    <li class="right"><a href="{{pathto('genindex')}}">Index</a></li>
-    {% endif %}{% endif %}
+    <li><a href="{{pathto('genindex')}}">Index</a></li>
   </ul>
 </div>
 {% endblock relbar2 %}

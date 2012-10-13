@@ -168,7 +168,7 @@ div#sidelinks {
 #related ul.link{
   margin: 0px;
   padding: 0px;
-  text-align: center;
+  text-align: right;
   background-color: black;
 }
 #related ul.link li{
