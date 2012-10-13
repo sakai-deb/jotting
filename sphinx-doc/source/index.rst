@@ -1,12 +1,14 @@
 .. Haskell doc.
 
+.. index:: Top Page
+
 Main Page
 ========================================
 ::
 
-  このドキュメントは Sphinx [http://sphinx-users.jp/index.html] で作られています。
+  このドキュメントは、Sphinx[http://sphinx-users.jp/index.html]で作られています。
+  テーマは、https://github.com/sakai-deb/sphinxTheme で公開しています。
 
-.. index:: Top Page
 
 Contents:
 
