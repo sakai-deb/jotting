@@ -40,7 +40,8 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/* css_repo/*
-	cp -r myTemplate/* $(BUILDDIR)/
+	cp -r myTemplate/build_repo/* $(BUILDDIR)/
+	cp -r myTemplate/css_repo/* css_repo/
 	cp -r source/theme-css/* css_repo/
 
 html:
