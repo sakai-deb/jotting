@@ -1,8 +1,8 @@
+.. index:: Haskell
+
 =============================
 Study Haskell!!
 =============================
-
-.. index:: Haskell
 
 主に、 `すごいHaskellたのしく学ぼう! <http://estore.ohmsha.co.jp/titles/978427406885P>`_ を読んでいきます。
 
