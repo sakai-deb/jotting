@@ -1,4 +1,15 @@
 @import url('default.css');
+
+a:link {
+  color: #355F7C;
+}
+a:visited, a:hover {
+  color: #F47A28;
+}
+a.toc-backref{
+  color: #355F7C;
+}
+
 /*--- body ---*/
 /* リンクの文字色とアンダーライン */
 body {
@@ -104,6 +115,10 @@ div#header {
   background-color: red;
   color: white;
 }
+#titledesign a{
+  color: #355F7C;
+}
+
 /*--- タイトル的なの ---*/
 #titledesign h1 {
   font-size: 48px;
@@ -151,6 +166,9 @@ div#document * h4{
   border-bottom-style: solid;
   border-color: #CCCCCC;
 }
+
+
+
 /*--- sidebar ---*/
 div#sidebar {
   float: right;
