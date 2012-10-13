@@ -44,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Study Haskel'
+project = u'Study Haskell'
 copyright = u'2011-2012, sakai'
 
 # The version info for the project you're documenting, acts as replacement for
