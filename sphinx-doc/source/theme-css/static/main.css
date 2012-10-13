@@ -166,7 +166,7 @@ div#sidelinks {
 
 /*--- related(下部のrelbar2) ---*/
 #related ul.link{
-  margin: 0px;
+  margin: 5px 0px;
   padding: 0px;
   text-align: right;
   background-color: black;
