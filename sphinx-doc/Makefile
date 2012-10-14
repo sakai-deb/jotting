@@ -41,7 +41,7 @@ help:
 clean:
 	-rm -rf $(BUILDDIR)/* theme_repo/*
 	cp -r myTemplate/build_repo/* $(BUILDDIR)/
-	cp -r myTemplate/theme_repo/* css_repo/
+	cp -r myTemplate/theme_repo/* theme_repo/
 	cp -r source/theme-css/* theme_repo/
 
 html:
