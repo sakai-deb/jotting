@@ -10,3 +10,4 @@ Study Haskell!!
    :maxdepth: 2
 
    haskel_contents/0.WhyHaskell.rst
+   haskel_contents/1.QuickSort.rst
