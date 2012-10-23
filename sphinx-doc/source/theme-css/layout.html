@@ -3,6 +3,13 @@
 {% endblock relbar1 %}
 
 {%- block header %}
+<script type="text/javascript" src="_static/javascript/jquery.pjax.js"></script>
+<script type="text/javascript">
+  $(function(){
+    // pjax
+    $('a').pjax('#pjax')
+  })
+</script>
 <div id="header">
   <div id="globalnavi">
     <ul>
@@ -36,9 +43,11 @@
 {% endblock sidebar2 %}
 
 {%- block document %}
+<div id="pjax">
  <div id="document">
    {%- block body %}{%-endblock body%}
  </div>
+</div>
  {%- endblock document %}
 
 {%- block relbar2 %}
