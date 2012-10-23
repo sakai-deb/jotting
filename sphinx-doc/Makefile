@@ -156,11 +156,8 @@ doctest:
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
 push:
-	CUR_DIR=`pwd`
-	git commit -a;git push
-	cd build
-	git commit -am"Build";git push 
-	cd ${CUR_DIR}/theme_repo
-	git commit -a
-	git push
-	cd ${CUR_DIR}
+	git commit -a; git push
+	cd build; git commit -am"Build";git push
+	cd theme_repo; git commit -a; git push
+
+
