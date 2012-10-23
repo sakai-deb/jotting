@@ -157,7 +157,7 @@ doctest:
 
 push:
 	git commit -a; git push
-	cd build; git commit -am"Build";git push
-	cd theme_repo; git commit -a; git push
+	cd build;git add .; git commit -am"Build";git push
+	cd theme_repo;git add .; git commit -a; git push
 
 
