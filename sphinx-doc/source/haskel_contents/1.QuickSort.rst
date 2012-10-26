@@ -147,7 +147,7 @@
 
    digraph qicksortGraph1 {
       graph [size="3.0, 12.0", label = "After A"];
-     "3" [shape = triangle];
+     "3" [shape = triangle, style = filled,  color = "#336666",  fillcolor = "#CC9999"];
      "[2, 1]" [shape=box];
      "[5, 4]" [shape=box];
 
@@ -162,35 +162,92 @@
 |        [4] : 5より小さい要素からなるリスト
 |        []  : 5より大きい要素からなるリスト
 
-.. graphviz::
+.. .. graphviz::
+.. 
+..    digraph qicksortGraph2 {
+..       graph [size="3.0, 12.0", label = "After B"];
+.. 
+..      subgraph class1 {
+..        color="turquoise";
+..        style = filled;
+..        label = "A";
+..        "3" [shape = triangle, style = filled,  color = "#336666",  fillcolor = "#CC9999"];
+..        "3" -> "[2, 1]";
+..        "3" -> "[5, 4]";
+..      }
+.. 
+..      "2" [shape = triangle, style = filled,  color = "#336666",  fillcolor = "#CC9999"];
+..      "[2, 1]" -> "2" [arrowhead = none, style=dotted];
+.. 
+..      subgraph class2 {
+..        label = "B-1";
+..        "[1]" [shape = box];
+..        X [shape = box, label="[]"];
+..        "2" -> X;
+..        "2" -> "[1]";
+..      }
+.. 
+..      "5" [shape = triangle, style = filled,  color = "#336666",  fillcolor = "#CC9999"];
+..      "[5, 4]" -> "5" [arrowhead = none, style=dotted];
+..      subgraph class3 {
+.. 
+..        label = "B-2";
+..        "[4]" [shape = box];
+..        Y [shape = box, label="[]"];
+..        "5" -> "[4]";
+..        "5" -> Y;
+..      }
+..    }
 
-   digraph qicksortGraph2 {
-      graph [size="3.0, 12.0", label = "After B"];
-     "3" [shape = triangle];
+.. image:: ../img/quick.png
+   :scale: 80%
 
-     subgraph class1 {
-       "3" -> "[2, 1]";
-       "3" -> "[5, 4]";
-     }
-     subgraph class2 {
-       "2" [shape = triangle];
-       "[1]" [shape = box];
-       X [shape = box, label="[]"];
-       "[2, 1]" -> "2" [arrowhead = none];
-       "2" -> X;
-       "2" -> "[1]";
-     }
-     subgraph class3 {
-       "5" [shape = triangle];
-       "[4]" [shape = box];
-       Y [shape = box, label="[]"];
-       "[5, 4]" -> "5" [arrowhead = none];
-       "5" -> "[4]";
-       "5" -> Y;
-     }
-   }
+このようにして、3の左側(3より小さい要素全体)がソートされて、[1, 2]になり、3の右側(3以上の要素全体)がソートされて[4, 5]となります。
+
+結果として、 [1, 2], [3], [4, 5] という3つのリストを合わせた、[1, 2, 3, 4, 5] というリストが得られます。
+
+2-2. 実装
+^^^^^^^^^^^
+
+1. Haskell での実装例
+
+.. code-block:: haskell
+
+   quicksort' :: Ord a => [a] -> [a]
+   quicksort' [] = []
+   quicksort' (x:xs) =
+     let smaller = filter (<x) xs
+         larger = filter (>=x) xs
+     in quicksort' smaller ++ [x] ++ quicksort' larger
+
+2. Ruby での実装例
+
+.. code-block:: ruby
+
+   class Sortable < Array
+     public
+     def quicksort
+       self.subquicksort.flatten.delete_if{|s| s == nil}
+     end
+
+     protected
+     def subquicksort
+       pivot = self.shift
+       left, right = Sortable.new([]), Sortable.new([])
+       self.each{|s|
+         if s < pivot
+           left.push(s)
+         else
+           right.push(s)
+         end
+       }
+       return [left.subquicksort, pivot, right.subquicksort] if left.size > 1 || right.size > 1
+       return [left, pivot, right]
+     end
+   end
 
 
-
+2-3. 反省
+^^^^^^^^^^^^^^
 
 
