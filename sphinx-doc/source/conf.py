@@ -28,7 +28,15 @@ import sys, os
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest',
 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage',
 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode',
+'sphinxcontrib.blockdiag', 'sphinx.ext.graphviz']
+
+graphviz_dot_args = [
+    '-Gfontname=ipag',
+    '-Nfontname=ipag',
+    '-Efontname=ipag',
 ]
+blockdiag_fontpath = '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf'
+blockdiag_antialias = True
 
 
 # Add any paths that contain templates here, relative to this directory.

@@ -1,0 +1,6 @@
+APT
+- python-imaging
+
+easy_install
+- sphinxcontrib-blockdiag
+- blockdiag
