@@ -3,18 +3,12 @@
 {% endblock relbar1 %}
 
 {%- block header %}
-<script type="text/javascript" src="_static/javascript/jquery.pjax.js"></script>
-<script type="text/javascript">
-  $(function(){
-    // pjax
-    $('a').pjax('#pjax')
-  })
-</script>
 <div id="header">
   <div id="globalnavi">
     <ul>
       <li><a href="{{ pathto('index') }}">Main</a></li>
       <li><a href="{{ pathto('aboutus/aboutus') }}">About</a></li>
+      <li><a href="{{ pathto('references/refs') }}">References</a></li>
     </ul>
   </div>
   <div id="titledesign">
