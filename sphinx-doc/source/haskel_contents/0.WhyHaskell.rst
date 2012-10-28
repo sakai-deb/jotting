@@ -1,4 +1,4 @@
-.. index:: Haskell
+.. index:: WhyHaskell
 
 =====================================
 なぜ Haskell を使うのか?
