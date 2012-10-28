@@ -66,6 +66,14 @@ table.docutils td {
   border-width: 1px;
 }
 
+table.docutils.footnote {
+  border: none;
+}
+table.docutils.footnote tr td.label{
+  padding: 1px 3px 1px 5px;
+}
+
+
 
 /*--- ID で指定されるもの ---*/
 /* ID の一覧
