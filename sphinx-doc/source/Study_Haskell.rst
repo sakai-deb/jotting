@@ -8,6 +8,6 @@ Study Haskell!!
 
 .. toctree::
    :maxdepth: 2
+   :glob:
 
-   haskel_contents/0.WhyHaskell.rst
-   haskel_contents/1.QuickSort.rst
+   haskel_contents/*
