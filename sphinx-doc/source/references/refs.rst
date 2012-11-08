@@ -16,7 +16,7 @@ Web サイト
 
    Haskell に限らず、関数型言語の何が優れているのかが書いてありました。
 
-#. `Learn You a Haskell for Great Good!<http://learnyouahaskell.com/chapters>`_
+#. `Learn You a Haskell for Great Good! <http://learnyouahaskell.com/chapters>`_
 
    『すごいHaskellたのしく学ぼう』の原文。更新されてるからか、微妙に構成も違うようです。
 
