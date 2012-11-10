@@ -28,7 +28,7 @@ import sys, os
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest',
 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.coverage',
 'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode',
-'sphinxcontrib.blockdiag', 'sphinx.ext.graphviz']
+'sphinxcontrib.blockdiag', 'sphinx.ext.graphviz', 'sphinxcontrib.recentpages']
 
 graphviz_dot_args = [
     '-Gfontname=ipag',
@@ -104,7 +104,6 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #html_theme = 'default'
-#html_theme = 'theme-green'
 html_theme = 'theme-css'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -149,8 +148,12 @@ html_last_updated_fmt = '%b %d, %Y'
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
 html_sidebars = {
-        '**' : ['sourcelink.html', 'searchbox.html']
+        '**' : ['sourcelink.html', 'searchbox.html', 'relations.html',
+        'recentpages.html', 'localtoc.html']
         }
+recentpages_sidebar = True
+recentpages_sidebar_pages = 5
+
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
