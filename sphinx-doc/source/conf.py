@@ -38,7 +38,6 @@ graphviz_dot_args = [
 blockdiag_fontpath = '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf'
 blockdiag_antialias = True
 
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['.templates']
 
