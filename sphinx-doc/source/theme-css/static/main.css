@@ -55,6 +55,17 @@ table.docutils {
   border-collapse: collapse;
   border-width: thin;
 }
+table.docutils caption {
+  font-weight: bold;
+/* 
+  color: rgb(255, 255, 255);
+  background-color: rgb(102, 102, 102);
+*/
+  border-top: 1px solid rgb(102, 102, 102);
+  border-left: 1px solid rgb(102, 102, 102);
+  border-right: 1px solid rgb(102, 102, 102);
+}
+
 table.docutils th {
   border: solid;
   border-width: thin;
@@ -73,7 +84,16 @@ table.docutils.footnote tr td.label{
   padding: 1px 3px 1px 5px;
 }
 
-
+table.highlighttable td.linenos {
+  margin: -5px;
+  padding: 0px;
+}
+td.linenos div.linenodiv {
+  border-right: 1px solid rgb(102, 102, 102);
+}
+td.linenos div.linenodiv *{
+  padding-right: 1px;
+}
 
 /*--- ID で指定されるもの ---*/
 /* ID の一覧
@@ -233,3 +253,17 @@ div#footer {
   color: #000000;
   font: italic lighter 70% "Sans";
 }
+
+
+/*--- Note & Waring ---*/
+div.note {
+    padding: 10px 15px 10px 80px;
+    background: #eee url(alert_info_32.png) 15px 15px no-repeat;
+    min-height: 42px;
+}
+div.warning {
+    padding: 10px 15px 10px 80px;
+    background: #ffe4e4 url(alert_warning_32.png) 15px 15px no-repeat;
+    min-height: 42px;
+}
+
