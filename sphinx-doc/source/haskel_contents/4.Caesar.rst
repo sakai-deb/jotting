@@ -72,10 +72,10 @@
    chr2int :: Char -> Int
    chr2int c = Char.ord c - Char.ord 'a'
    int2chr :: Int -> Char
-   int2chr n = Char.chr (Char.ord 'a'  + n)
+   int2chr n = Char.chr (Char.ord 'a' + n)
    shift :: Int -> Char -> Char
    shift n c
-     | Char.isLower c =  int2chr $ (chr2int (Char.toLower c) + n) `mod` 26
+     | Char.isLower c = int2chr $ (chr2int (Char.toLower c) + n) `mod` 26
      | otherwise = c
    -- 単語をずらす
    wordShift :: Int -> String -> String
