@@ -19,7 +19,6 @@ body {
   color: #000;              /* 黒の文字 */
   margin: 0;
   padding: 0;
-  line-height: 2.0em;
 }
 p.topic-title.first{
   background-color: rgb(255, 255, 120);
@@ -167,6 +166,7 @@ div#document {
   border-style: solid;
   border-color: #DDDDff;
   border-width: thin;
+  line-height: 2.0em;
 }
 div#document * h1{
   font-family: 'Migu 1P', 'Bitstream Vera Sans', 'Sans', cursive;
