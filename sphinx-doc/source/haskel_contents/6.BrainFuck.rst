@@ -96,7 +96,7 @@ Brainfuck はプログラミング言語の1つです。
 * > : ポインタをインクリメントする
 * < : ポインタをデクリメントする
 
-.. image:: ../img/value.png
+.. image:: ../img/pointer.png
    :scale: 70%
 
 2.3.2. + -
@@ -104,7 +104,7 @@ Brainfuck はプログラミング言語の1つです。
 * \+ : ポインタの指す値をインクリメントする
 * \- : ポインタの指す値をデクリメントする
 
-.. image:: ../img/pointer.png
+.. image:: ../img/value.png
    :scale: 70%
 
 2.3.3. . ,
