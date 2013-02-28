@@ -24,7 +24,7 @@ Randoms
 | 乱数のために、 System.Random でいくつかの関数が用意されています。
 | 乱数ジェネレータについては、後述。
 
-1. random, randoms
+2.1. random, randoms
 ^^^^^^^^^^^^^^^^^^^^^
 
 * random: 乱数ジェネレータとを受け取って、乱数と新しい乱数ジェネレータを返す
@@ -35,7 +35,7 @@ Randoms
    random :: (RandomGen g, Random a) => g -> (a, g)
    randoms :: RandomGen g => g -> [a]
 
-2. randomR, randomRs
+2.2. randomR, randomRs
 ^^^^^^^^^^^^^^^^^^^^^^
 
 * randomR: random の返す乱数値の範囲を制限したバージョン
@@ -46,7 +46,7 @@ Randoms
    randomR :: RandomGen g => (a,  a) -> g -> (a,  g)
    randomRs :: RandomGen g => (a,  a) -> g -> [a]
 
-3. randomIO, randomRIO
+2.3. randomIO, randomRIO
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * randomIO: random において、グローバル乱数ジェネレータを使うようにしたもの
