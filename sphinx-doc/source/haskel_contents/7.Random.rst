@@ -89,6 +89,7 @@ Randoms
    getStdGen :: IO StdGen
    newStdGen :: IO StdGen
 
+ここまでの内容で、基本的な擬似乱数生成ができるようになりました。
 
 4. まとめ
 ------------
