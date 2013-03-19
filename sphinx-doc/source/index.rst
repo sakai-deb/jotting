@@ -17,6 +17,7 @@ Contents:
    :maxdepth: 2
 
    Study_Haskell
+   Memo
    Others
 
 Indices and Tables

@@ -1,0 +1,77 @@
+============================
+Quine
+============================
+
+:date: 2013/03/19
+
+.. contents:: 目次
+      :local:
+      :depth: 2
+      :backlinks: top
+
+1. Quine とは
+---------------
+
+| 最近 Quine という遊びを知ったので、やってみました。
+| ただ、簡単なものしかやってないので、すでに Quine を知っている人にとっては既知のコードしか出てこないと思います。(本当は Template Haskell 使って、Quine を考える予定だったのだけれど、Template Haskell をまだ良くわかってない。)
+
+| Quine とは、いったいなんでしょうか？
+| **"自分自身を出力するプログラム"** であって、入力を伴わないようなものです。
+| この性質は、"プログラムを吐くプログラム"に対して、"プログラムを実行する"、という関数が考えられますが、その不動点が Quine である、という様に理解できると思います。
+| そのため、理論的にも興味のある対象だと思います。
+
+| 私が Quine を知ったのは、
+| `Quine・難解プログラミングについて <http://www.slideshare.net/mametter/quine-10290517>`_ というスライドがきっかけです。
+| このスライドを書いてる方は、非常に<del>ヤバイ</del>スゴイ人で、他にも
+| - `山手線Quine <http://d.hatena.ne.jp/ku-ma-me/20091130/p1>`_
+| - `MultiQuine <http://d.hatena.ne.jp/ku-ma-me/20090916/p1>`_
+| - `音も鳴らすQuine <http://d.hatena.ne.jp/ku-ma-me/20121224>`_
+| などといった、遊び心あふれるQuineを書いています。
+
+| 以下では、簡単な Quine を Haskell で書いてみたいと思います。
+| ちなみに、Ruby での簡単な Quine として、
+
+.. code-block:: ruby
+
+   eval s="puts 'eval s=' + s.inspect"
+
+| があります。
+| というわけで、Ruby にも非自明な Quine が存在しました。
+| (ここでは、自明な Quine とは、空のプログラムのことだとします。)
+
+2. Haskell での例
+--------------------
+
+| Haskell での例を作ってみます。
+| とにかく必要なこととして、最終的には自分自身を出力する部分があります。
+
+.. code-block:: haskell
+
+   main = putStr("...")
+
+| という部分は必要でしょう。さらに、今書いた部分も表示する必要があるので、
+
+.. code-block:: haskell
+
+   main = putStr("main = putStr(\"...\")")
+
+| という形で表されるはずです。 しかし、これを続けようとしても、
+
+.. code-block:: haskell
+
+   main = putStr("main = putStr(\"main = putStr(...)\")")
+
+| となって、これを続けていくにしても、長さ無限のプログラムが必要になってしまいます。
+| さて、どうしましょうか。
+
+2.1. 変数を使う
+^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: haskell
+
+   var = "main = putStr$\"var = \" ++ show var ++ \";\" ++ var";main = putStr$"var = " ++ show var ++ ";" ++ var
+
+.. code-block:: haskell
+
+   (\x -> putStr(x++" "++show x)) "(\\x -> putStr(x++\" \"++show x)"
+
