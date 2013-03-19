@@ -23,10 +23,10 @@ Quine
 | 私が Quine を知ったのは、
 | `Quine・難解プログラミングについて <http://www.slideshare.net/mametter/quine-10290517>`_ というスライドがきっかけです。
 | このスライドを書いてる方は、非常に<del>ヤバイ</del>スゴイ人で、他にも
-| - `山手線Quine <http://d.hatena.ne.jp/ku-ma-me/20091130/p1>`_
+| - `山手 Quine <http://d.hatena.ne.jp/ku-ma-me/20091130/p1>`_
 | - `MultiQuine <http://d.hatena.ne.jp/ku-ma-me/20090916/p1>`_
 | - `音も鳴らすQuine <http://d.hatena.ne.jp/ku-ma-me/20121224>`_
-| - `Template Haskell での Quine <http://d.hatena.ne.jp/ku-ma-me/20130303>`_
+| - `Template Haskell での Type-level Quine <http://d.hatena.ne.jp/ku-ma-me/20130303>`_
 | などといった、遊び心あふれるQuineを書いています。
 
 | 以下では、簡単な Quine を Haskell で書いてみたいと思います。
